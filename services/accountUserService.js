@@ -12,7 +12,6 @@ class AccountUserService {
         .then(
             (err) => {
                 if (err) throw new ReferenceError('User not found.')
-                console.log('test')
                 switch (Object.keys(query)[0]) {
                     case 'limit':
                         return AccountUser.findAll({ limit: query.limit })

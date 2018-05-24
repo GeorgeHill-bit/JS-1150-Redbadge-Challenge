@@ -23,6 +23,7 @@ router.get('/:id/users', (req, res) => {
     .then(
         users => {
             res.status(200).render('index', {users:JSON.stringify(users)})
+            console.log("users=", users)
         }
     )
 })
